@@ -1,5 +1,7 @@
-import 'package:catalog_app/home.dart';
+import 'package:catalog_app/Screens/Login.dart';
+import 'package:catalog_app/Screens/home.dart';
 import 'package:flutter/material.dart';
+import 'Screens/Login.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +14,10 @@ class MyApp extends StatelessWidget {
     // int days = 3000;
 
     return MaterialApp(
-      home: Home(),
+      //home: Home(),
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      initialRoute: "/home",
+      routes: {"/": (context) => Login(), "/home": ((context) => Home())},
     );
   }
 }
