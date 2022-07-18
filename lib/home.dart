@@ -6,8 +6,9 @@ class Home extends StatelessWidget {
     // ignore: prefer_const_declarations
     final int days = 300;
 
-    return Material(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(title: Text("hello")),
+      body: Center(
         child: Container(
           child: Text(
             "HELLO WORLD $days ",
@@ -19,6 +20,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+      drawer: Drawer(),
     );
   }
 }
