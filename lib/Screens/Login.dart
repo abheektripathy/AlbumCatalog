@@ -10,9 +10,12 @@ class Login extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
-          Image.asset(
-            "assets/images/undraw_Mobile_login_re_9ntv.png",
-            fit: BoxFit.cover,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
+            child: Image.asset(
+              "assets/images/undraw_Mobile_login_re_9ntv.png",
+              fit: BoxFit.cover,
+            ),
           ),
           SizedBox(
             height: 20.0,
