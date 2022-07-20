@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
     // int days = 3000;
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       //home: Home(),
       theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+          primarySwatch: Colors.grey,
+          fontFamily: GoogleFonts.darkerGrotesque().fontFamily),
       //initialRoute: "/home",
       routes: {
         "/": (context) => Login(),

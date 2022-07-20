@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -7,13 +9,17 @@ class Home extends StatelessWidget {
     final int days = 300;
 
     return Scaffold(
-      appBar: AppBar(title: Text("hello")),
+      appBar: AppBar(
+          title: Text(
+        "Albums",
+        style: TextStyle(fontWeight: FontWeight.bold),
+      )),
       body: Center(
         child: Container(
           child: Text(
             "HELLO WORLD $days ",
             style: const TextStyle(
-                color: Color.fromARGB(255, 9, 194, 129),
+                color: Color.fromARGB(255, 255, 255, 255),
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
                 wordSpacing: 1.0),
