@@ -11,10 +11,19 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-        "Albums",
-        style: TextStyle(fontWeight: FontWeight.bold),
-      )),
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+          title: Image.asset(
+            "assets/images/Screen Shot 2022-07-21 at 11.49.22 PM.png",
+            fit: BoxFit.contain,
+            height: 35.0,
+          )
+          //  Text(
+          //   "Albums",
+          //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
+          //   textAlign: TextAlign.right,
+          // )
+          ),
       body: Center(
         child: Container(
           child: Text(

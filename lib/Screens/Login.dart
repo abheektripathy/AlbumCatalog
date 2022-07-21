@@ -39,21 +39,21 @@ class _LoginState extends State<Login> {
           child: Column(
             children: [
               SizedBox(
-                height: 20.0,
+                height: 70.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30.0),
                 child: Container(
-                  width: 300.0,
-                  height: 300.0,
+                  width: 290.0,
+                  height: 270.0,
                   child: Image.asset(
-                    "assets/images/fluuterbs.png",
+                    "assets/images/Screen Shot 2022-07-21 at 11.58.51 PM.png",
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10.0,
+                height: 15.0,
               ),
               Container(
                 child: Flife
