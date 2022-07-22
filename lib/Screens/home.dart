@@ -2,6 +2,9 @@
 
 import 'package:catalog_app/Widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import "package:catalog_app/Albums/album.dart";
+
+import '../Widgets/AlbumWidget.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -24,18 +27,25 @@ class Home extends StatelessWidget {
           //   textAlign: TextAlign.right,
           // )
           ),
-      body: Center(
-        child: Container(
-          child: Text(
-            "HELLO WORLD $days ",
-            style: const TextStyle(
-                color: Color.fromARGB(255, 255, 255, 255),
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                wordSpacing: 1.0),
-          ),
-        ),
+      body: ListView.builder(
+        itemCount: AlbumModels.Albums1.length,
+        itemBuilder: (BuildContext context, int index) {
+          return AlbumWidget(Albums1: AlbumModels.Albums1[index]);
+        },
       ),
+      // Center(
+      //   child: Container(
+      //     child: Text(
+      //       "HELLO WORLD $days ",
+      //       style: const TextStyle(
+      //           color: Color.fromARGB(255, 255, 255, 255),
+      //           fontSize: 30.0,
+      //           fontWeight: FontWeight.bold,
+      //           wordSpacing: 1.0),
+      //     ),
+      //   ),
+      // )
+
       drawer: Drawerr(),
     );
   }
