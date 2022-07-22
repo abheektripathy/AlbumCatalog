@@ -2,15 +2,16 @@
 
 import 'package:catalog_app/Widgets/drawer.dart';
 import 'package:flutter/material.dart';
-import "package:catalog_app/Albums/album.dart";
+import 'package:catalog_app/Albums/catalog.dart';
 
-import '../Widgets/AlbumWidget.dart';
+import '../Widgets/item_widget.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_declarations
     final int days = 300;
+    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
 
     return Scaffold(
       appBar: AppBar(
@@ -28,9 +29,11 @@ class Home extends StatelessWidget {
           // )
           ),
       body: ListView.builder(
-        itemCount: AlbumModels.Albums1.length,
+        itemCount: dummyList.length,
         itemBuilder: (BuildContext context, int index) {
-          return AlbumWidget(Albums1: AlbumModels.Albums1[index]);
+          return itemWidget(
+            item: dummyList[index],
+          );
         },
       ),
       // Center(
