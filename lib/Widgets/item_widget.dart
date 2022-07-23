@@ -5,9 +5,6 @@ import 'package:flutter/material.dart';
 
 class itemWidget extends StatelessWidget {
   final Item item;
-//album is the class jismein string image yeh sab variables hai.
-//uss datatype Album Ka yahan pe variable instantiate kiya hai
-// so variable Ablum1 will have all of the properties of each object of ablum.
 
   const itemWidget({Key? key, required this.item}) : super(key: key);
 
