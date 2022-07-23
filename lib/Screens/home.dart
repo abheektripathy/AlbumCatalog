@@ -3,15 +3,38 @@
 import 'package:catalog_app/Widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:catalog_app/Albums/catalog.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
 import '../Widgets/item_widget.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  final int days = 300;
+  final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
+
+  @override
+  //build method call hone se pehle data load hojayege
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+    print(catalogJson);
+  }
+
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_declarations
-    final int days = 300;
-    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
+    //final int days = 300;
+    //final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
 
     return Scaffold(
       appBar: AppBar(
