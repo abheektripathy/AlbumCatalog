@@ -27,6 +27,8 @@ class _HomeState extends State<Home> {
 
   loadData() async {
     var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+
+    jsonEncode(catalogJson);
     print(catalogJson);
   }
 
