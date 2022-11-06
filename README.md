@@ -1,4 +1,4 @@
-# AlbumCatalogue
+# Band-er
 
 A Flutter App to catalog your fav albums from music bands.
 Currently has a login screen,home screen and takes data from a locally stored json file
